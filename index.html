@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Javed Iqbal | Urdu Fiction & Suspense Writer</title>
+<meta name="description" content="Official portfolio and writing desk of Javed Iqbal — Urdu fiction author specializing in suspense, regional folklore, and audio scripts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Nastaliq+Urdu:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #090506;
+    --bg-card: rgba(24, 11, 15, 0.72);
+    --bg-card-hover: rgba(38, 16, 23, 0.88);
+    --border: rgba(244, 63, 94, 0.18);
+    --border-strong: rgba(244, 63, 94, 0.44);
+    --primary: #e11d48;
+    --primary-hover: #be123c;
+    --primary-glow: rgba(225, 29, 72, 0.35);
+    --crimson: #fb7185;
+    --text: #fdf2f4;
+    --text-dim: #cbd5e1;
+    --text-faint: #94a3b8;
+    --sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --urdu: 'Noto Nastaliq Urdu', serif;
+    --max: 1200px;
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-pill: 9999px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+  }
+
+  body.no-scroll { overflow: hidden; }
+  ::selection { background: var(--primary); color: #fff; }
+  a { color: inherit; text-decoration: none; }
+  ul { list-style: none; }
+  button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+  img { max-width: 100%; display: block; }
+  :focus-visible { outline: 2px solid var(--crimson); outline-offset: 3px; }
+
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 28px; }
+
+  .ambient-glow {
+    position: absolute;
+    width: 580px;
+    height: 580px;
+    border-radius: 50%;
+    filter: blur(140px);
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.14;
+  }
+  .glow-1 { top: -60px; left: 20%; background: radial-gradient(circle, #e11d48, #881337); }
+  .glow-2 { top: 1200px; right: 10%; background: radial-gradient(circle, #9f1239, #4c0519); }
+  .glow-3 { top: 2600px; left: 5%; background: radial-gradient(circle, #f43f5e, #831843); }
+
+  .section { padding: 90px 0; position: relative; z-index: 2; }
+  .section-head { text-align: center; max-width: 720px; margin: 0 auto 50px; }
+  .section-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--crimson);
+    margin-bottom: 14px;
+    padding: 6px 16px;
+    background: rgba(225, 29, 72, 0.09);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-pill);
+  }
+  .section-head h2 {
+    font-size: clamp(2rem, 3.6vw, 2.8rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+  .section-head p { color: var(--text-dim); font-size: 1rem; }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 26px;
+    border-radius: var(--radius-pill);
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.25s ease;
+    border: 1px solid transparent;
+  }
+  .btn-primary {
+    background: var(--primary);
+    color: #fff;
+    box-shadow: 0 4px 18px var(--primary-glow);
+  }
+  .btn-primary:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+  }
+  .btn-glass {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
+    color: var(--text);
+  }
+  .btn-glass:hover {
+    background: rgba(244, 63, 94, 0.1);
+    border-color: var(--border-strong);
+    transform: translateY(-2px);
+  }
+
+  .glass-card {
+    background: var(--bg-card);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .glass-card:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--border-strong);
+    transform: translateY(-3px);
+  }
+
+  /* Navigation */
+  header.site-nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 500;
+    background: rgba(9, 5, 6, 0.85);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner {
+    max-width: var(--max); margin: 0 auto; padding: 14px 28px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .brand {
+    font-size: 1.25rem; font-weight: 800; letter-spacing: -0.02em;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .brand-badge {
+    background: linear-gradient(135deg, #e11d48, #9f1239);
+    width: 32px; height: 32px; border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.85rem; font-weight: 800; color: #fff;
+  }
+  nav.nav-links { display: flex; align-items: center; gap: 24px; }
+  nav.nav-links a {
+    font-size: 0.88rem; font-weight: 500; color: var(--text-dim);
+    transition: color 0.2s;
+  }
+  nav.nav-links a:hover { color: #fff; }
+  .nav-right { display: flex; align-items: center; gap: 12px; }
+
+  .hamburger { display: none; flex-direction: column; gap: 5px; width: 22px; cursor: pointer; }
+  .hamburger span { display: block; height: 2px; width: 100%; background: #fff; border-radius: 2px; }
+
+  .mobile-menu {
+    position: fixed; inset: 0; z-index: 450; background: rgba(9, 5, 6, 0.98);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px;
+    opacity: 0; visibility: hidden; transition: 0.3s ease;
+  }
+  .mobile-menu.open { opacity: 1; visibility: visible; }
+  .mobile-menu a { font-size: 1.2rem; font-weight: 600; }
+
+  /* Hero */
+  .hero {
+    min-height: 88vh;
+    padding-top: 130px;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+  .hero-tagline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 18px;
+    background: rgba(225, 29, 72, 0.12);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-pill);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--crimson);
+    margin-bottom: 22px;
+  }
+  .pulse-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--crimson);
+    box-shadow: 0 0 10px var(--crimson);
+  }
+  .hero h1 {
+    font-size: clamp(2.4rem, 5.5vw, 4.4rem);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    max-width: 900px;
+    margin: 0 auto 20px;
+  }
+  .hero h1 span.crimson-gradient {
+    color: var(--crimson);
+  }
+  .hero p.hero-desc {
+    font-size: clamp(1rem, 1.5vw, 1.15rem);
+    color: var(--text-dim);
+    max-width: 680px;
+    margin: 0 auto 32px;
+  }
+  .hero-cta-group {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  .hero-pill-bar {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: var(--text-faint);
+    font-size: 0.85rem;
+  }
+  .hero-pill-bar span { display: flex; align-items: center; gap: 6px; }
+  .hero-pill-bar svg { color: var(--crimson); width: 15px; height: 15px; }
+
+  /* About */
+  .about-container {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 48px;
+    align-items: center;
+    padding: 38px;
+  }
+  .portrait-card {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--border);
+    background: #11070a;
+  }
+  .portrait-card img {
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+    object-position: center top;
+  }
+  .portrait-badge {
+    position: absolute;
+    bottom: 12px; left: 12px; right: 12px;
+    background: rgba(14, 6, 9, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 12px 14px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+  }
+  .portrait-badge h4 { font-size: 1rem; font-weight: 700; color: #fff; }
+  .portrait-badge p { font-size: 0.75rem; color: var(--crimson); font-weight: 600; }
+
+  .about-content h3 { font-size: 1.9rem; font-weight: 800; margin-bottom: 14px; }
+  .about-content p { color: var(--text-dim); margin-bottom: 14px; font-size: 0.95rem; }
+  .about-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin: 22px 0;
+    padding: 16px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .stat-box h5 { font-size: 1.6rem; font-weight: 800; color: var(--crimson); }
+  .stat-box span { font-size: 0.75rem; color: var(--text-faint); text-transform: uppercase; font-weight: 600; }
+  .skill-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+  .chip {
+    padding: 6px 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-pill);
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-dim);
+  }
+
+  /* Roles Tab */
+  .role-tabs-wrap {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
+  .role-tab-btn {
+    padding: 9px 22px;
+    border-radius: var(--radius-pill);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-dim);
+    transition: 0.2s;
+  }
+  .role-tab-btn.active, .role-tab-btn:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #fff;
+  }
+  .role-panel { display: none; }
+  .role-panel.active { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center; }
+
+  .role-img-box {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    height: 320px;
+    border: 1px solid var(--border);
+  }
+  .role-img-box img { width: 100%; height: 100%; object-fit: cover; }
+  .role-info-box h3 { font-size: 1.6rem; font-weight: 800; margin-bottom: 10px; }
+  .role-info-box p { color: var(--text-dim); margin-bottom: 16px; font-size: 0.92rem; }
+  .role-deliverables li {
+    display: flex; align-items: center; gap: 8px; font-size: 0.85rem;
+    color: var(--text-dim); margin-bottom: 8px;
+  }
+  .role-deliverables li svg { color: var(--crimson); width: 14px; height: 14px; }
+
+  /* Stories */
+  .stories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .story-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .story-thumb-wrap {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid var(--border);
+    background: #000;
+  }
+  .story-thumb-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+  .story-card:hover .story-thumb-wrap img { transform: scale(1.05); }
+  .story-badge {
+    position: absolute; top: 12px; left: 12px;
+    padding: 4px 10px; border-radius: var(--radius-pill);
+    background: rgba(12, 5, 8, 0.85);
+    border: 1px solid var(--border);
+    font-size: 0.7rem; color: var(--crimson); font-weight: 700;
+  }
+  .story-card-body { padding: 22px; flex: 1; display: flex; flex-direction: column; }
+  .story-urdu-title {
+    font-family: var(--urdu);
+    direction: rtl;
+    text-align: right;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-bottom: 6px;
+  }
+  .story-trans-title { font-size: 0.82rem; font-weight: 600; color: var(--crimson); margin-bottom: 10px; }
+  .story-excerpt { font-size: 0.88rem; color: var(--text-dim); margin-bottom: 18px; flex: 1; }
+  .story-meta-footer {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-top: 14px; border-top: 1px solid var(--border);
+    font-size: 0.82rem;
+  }
+
+  /* Testimonials */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .comment-card {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .comment-user-row { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+  .user-avatar { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 1px solid var(--border); }
+  .user-meta h4 { font-size: 0.9rem; font-weight: 700; }
+  .user-meta span { font-size: 0.72rem; color: var(--text-faint); display: block; }
+  .comment-body { font-size: 0.88rem; color: var(--text-dim); margin-bottom: 14px; flex: 1; }
+  .comment-urdu { font-family: var(--urdu); direction: rtl; text-align: right; font-size: 1.05rem; line-height: 1.8; color: #fce7f3; }
+  .comment-reactions {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-top: 10px; border-top: 1px solid var(--border);
+    font-size: 0.75rem; color: var(--text-faint);
+  }
+
+  .vault-drawer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+  .vault-drawer.open { max-height: 1800px; margin-top: 20px; }
+  .vault-toggle-container { text-align: center; margin-top: 28px; }
+
+  /* FAQ */
+  .faq-accordion { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+  .faq-node {
+    border-radius: var(--radius-md);
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    overflow: hidden;
+  }
+  .faq-node.active { border-color: var(--border-strong); }
+  .faq-trigger {
+    width: 100%; text-align: left; padding: 18px 22px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 0.95rem; font-weight: 600;
+  }
+  .faq-plus { font-size: 1.2rem; transition: transform 0.2s; }
+  .faq-node.active .faq-plus { transform: rotate(45deg); color: var(--crimson); }
+  .faq-body { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; color: var(--text-dim); font-size: 0.9rem; padding: 0 22px; }
+  .faq-body p { padding-bottom: 18px; }
+
+  /* Contact */
+  .contact-wrapper {
+    text-align: center;
+    padding: 50px 30px;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(180deg, rgba(225, 29, 72, 0.1) 0%, rgba(17, 7, 10, 0.9) 100%);
+    border: 1px solid var(--border-strong);
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .newsletter-bar {
+    display: flex;
+    max-width: 440px;
+    margin: 0 auto 30px;
+    gap: 8px;
+  }
+  .newsletter-input {
+    flex: 1;
+    padding: 12px 18px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-pill);
+    color: #fff;
+    font-size: 0.88rem;
+  }
+  .contact-meta-row {
+    display: flex; justify-content: center; gap: 36px; flex-wrap: wrap;
+    border-top: 1px solid var(--border); padding-top: 26px;
+  }
+  .meta-col { text-align: left; }
+  .meta-col .label { font-size: 0.7rem; text-transform: uppercase; color: var(--text-faint); font-weight: 700; margin-bottom: 2px; }
+  .meta-col .val { font-size: 0.88rem; font-weight: 600; }
+  .meta-col .val a { color: var(--crimson); }
+
+  /* Footer */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 50px 0 24px;
+    background: #050203;
+    font-size: 0.84rem;
+  }
+  .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 36px; margin-bottom: 36px; }
+  .footer-brand p { color: var(--text-dim); margin-top: 8px; }
+  .footer-col h4 { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: #fff; margin-bottom: 14px; }
+  .footer-col ul li { margin-bottom: 8px; }
+  .footer-col a { color: var(--text-dim); }
+  .footer-col a:hover { color: var(--crimson); }
+  .footer-bottom {
+    display: flex; justify-content: space-between; align-items: center;
+    border-top: 1px solid var(--border); padding-top: 20px;
+    color: var(--text-faint);
+  }
+
+  /* Story Reader Modal */
+  .story-reader {
+    position: fixed; inset: 0; z-index: 900;
+    background: #080305;
+    overflow-y: auto; opacity: 0; visibility: hidden; transform: translateY(16px);
+    transition: all 0.3s ease;
+  }
+  .story-reader.open { opacity: 1; visibility: visible; transform: translateY(0); }
+  .story-reader.sepia-mode { background: #181411 !important; color: #f4ebd9 !important; }
+  .story-reader.sepia-mode .reader-text { color: #ebdec3 !important; }
+
+  .reader-header {
+    position: sticky; top: 0; z-index: 20;
+    background: rgba(8, 3, 5, 0.9); backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 24px; display: flex; align-items: center; justify-content: space-between;
+    gap: 12px;
+  }
+  .ctrl-btn {
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-pill);
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #fff;
+  }
+  .ctrl-btn:hover { background: var(--primary); }
+  .reader-hero-art {
+    width: 100%; max-height: 380px; object-fit: cover;
+    border-radius: var(--radius-md); margin-bottom: 28px; border: 1px solid var(--border);
+  }
+  .reader-main { max-width: 780px; margin: 0 auto; padding: 30px 20px 80px; }
+  .reader-meta-tag { text-align: center; margin-bottom: 14px; font-size: 0.78rem; color: var(--crimson); font-weight: 700; }
+  .reader-title-urdu {
+    font-family: var(--urdu); direction: rtl; text-align: center;
+    font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1.8; margin-bottom: 8px;
+  }
+  .reader-byline {
+    text-align: center; font-family: var(--urdu); direction: rtl;
+    color: var(--text-dim); font-size: 1.05rem; margin-bottom: 30px;
+    padding-bottom: 18px; border-bottom: 1px solid var(--border);
+  }
+  .reader-text {
+    font-family: var(--urdu); direction: rtl; text-align: right;
+    font-size: 1.3rem; line-height: 2.4; color: #fdf2f4;
+  }
+  .reader-text p { margin-bottom: 24px; }
+  .reader-signature {
+    font-family: var(--urdu); direction: rtl; text-align: left;
+    color: var(--crimson); font-size: 1.1rem; margin-top: 30px;
+    padding-top: 18px; border-top: 1px solid var(--border);
+  }
+
+  /* Toast Notification */
+  .toast-msg {
+    position: fixed; bottom: 24px; right: 24px;
+    background: var(--primary); color: #fff;
+    padding: 10px 20px; border-radius: var(--radius-pill);
+    font-size: 0.85rem; font-weight: 600;
+    z-index: 1000; transform: translateY(80px); opacity: 0;
+    transition: all 0.3s ease;
+  }
+  .toast-msg.show { transform: translateY(0); opacity: 1; }
+
+  @media (max-width: 1024px) {
+    .about-container, .role-panel.active { grid-template-columns: 1fr; }
+    .stories-grid, .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 768px) {
+    nav.nav-links { display: none; }
+    .hamburger { display: flex; }
+    .section { padding: 60px 0; }
+    .stories-grid, .testimonials-grid, .footer-grid { grid-template-columns: 1fr; }
+    .newsletter-bar { flex-direction: column; }
+    .reader-header { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<div class="ambient-glow glow-1"></div>
+<div class="ambient-glow glow-2"></div>
+<div class="ambient-glow glow-3"></div>
+
+<div class="toast-msg" id="toastMsg">Action updated</div>
+
+<!-- Navigation -->
+<header class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="#home" class="brand">
+      <div class="brand-badge">JI</div>
+      <span>Javed Iqbal</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#roles">Writing Roles</a>
+      <a href="#stories">Fiction</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <!-- Fiverr Desk CTA -->
+      <a href="https://www.fiverr.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 8px 18px; font-size: 0.82rem;">
+        Fiverr Desk
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Navigation -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" class="mnav">Home</a>
+  <a href="#about" class="mnav">About</a>
+  <a href="#roles" class="mnav">Writing Roles</a>
+  <a href="#stories" class="mnav">Fiction</a>
+  <a href="#testimonials" class="mnav">Reviews</a>
+  <a href="#faq" class="mnav">FAQ</a>
+  <a href="#contact" class="mnav">Contact</a>
+  <a href="https://www.fiverr.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary mnav">Hire on Fiverr Desk</a>
+</div>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="wrap" style="position:relative; z-index:2;">
+    <div class="hero-tagline">
+      <span class="pulse-dot"></span>
+      Urdu Suspense &amp; Storytelling Desk
+    </div>
+    <h1>
+      Every great story starts with silence.<br>
+      <span class="crimson-gradient">I write the words that break it.</span>
+    </h1>
+    <p class="hero-desc">
+      Suspense fiction, folk mysteries, and audio-ready Urdu scripts crafted with genuine regional atmosphere and believable characters.
+    </p>
+    <div class="hero-cta-group">
+      <a href="#stories" class="btn btn-primary">Read Stories</a>
+      <a href="https://www.fiverr.com/" target="_blank" rel="noopener noreferrer" class="btn btn-glass">Order on Fiverr Desk</a>
+    </div>
+    <div class="hero-pill-bar">
+      <span>
+        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+        Original Urdu Fiction
+      </span>
+      <span>
+        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+        YouTube Narration Scripts
+      </span>
+      <span>
+        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+        Prompt Delivery on Fiverr
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="glass-card about-container">
+      <div class="portrait-card">
+        <!-- Direct local image link -->
+        <img src="javed-iqbal.jpg" alt="Javed Iqbal - Urdu Writer">
+        <div class="portrait-badge">
+          <h4>Javed Iqbal</h4>
+          <p>Author &amp; Scriptwriter</p>
+        </div>
+      </div>
+      <div class="about-content">
+        <span class="section-tag">About The Writer</span>
+        <h3>Real Stories Grounded in Multani Culture</h3>
+        <p>I write suspense, mystery, and cultural fiction inspired by real places and human nature. From quiet canal banks in South Punjab to roadside tea-stall debates, my goal is to keep readers hooked until the final line.</p>
+        <p>Whether you need an episodic story for print or an audio script formatted for a YouTube channel, I deliver polished work with natural Urdu phrasing.</p>
+        
+        <div class="about-stats">
+          <div class="stat-box">
+            <h5>50+</h5>
+            <span>Stories Written</span>
+          </div>
+          <div class="stat-box">
+            <h5>10k+</h5>
+            <span>Social Readers</span>
+          </div>
+          <div class="stat-box">
+            <h5>100%</h5>
+            <span>Original Writing</span>
+          </div>
+        </div>
+
+        <div class="skill-chips">
+          <span class="chip">Urdu Fiction</span>
+          <span class="chip">Suspense &amp; Horror</span>
+          <span class="chip">YouTube Audio Scripts</span>
+          <span class="chip">Regional Satire</span>
+          <span class="chip">Ghostwriting</span>
+        </div>
+
+        <a href="https://www.fiverr.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size:0.85rem; padding:10px 22px;">
+          Hire on Fiverr Desk
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Roles Tab -->
+<section class="section" id="roles">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-tag">What I Write</span>
+      <h2>Roles &amp; Writing Formats</h2>
+      <p>Select a format below to see sample work and scope.</p>
+    </div>
+
+    <div class="role-tabs-wrap">
+      <button class="role-tab-btn active" data-target="role-suspense">Suspense Fiction</button>
+      <button class="role-tab-btn" data-target="role-audio">YouTube Audio Scripts</button>
+      <button class="role-tab-btn" data-target="role-satire">Cultural Satire</button>
+    </div>
+
+    <!-- Panel 1 -->
+    <div class="glass-card role-panel active" id="role-suspense" style="padding: 30px;">
+      <div class="role-img-box">
+        <img src="https://images.unsplash.com/photo-1509114397022-ed747cca3f65?auto=format&fit=crop&w=800&q=80" alt="Suspense Storytelling">
+      </div>
+      <div class="role-info-box">
+        <span class="section-tag">Fiction Writing</span>
+        <h3>Urdu Thrillers &amp; Folk Suspense</h3>
+        <p>Carefully structured plots featuring atmospheric tension, unexpected reveals, and natural dialogue. Ideal for literary magazines, blogs, and serialized digests.</p>
+        <ul class="role-deliverables">
+          <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Unsolved regional mysteries and folk legends</li>
+          <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Airtight pacing and suspenseful chapter ends</li>
+          <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Authentic South Punjabi settings</li>
+        </ul>
+        <a href="#stories" class="btn btn-primary" style="padding: 9px 20px;">Read Samples</a>
+      </div>
+    </div>
+
+    <!-- Panel 2 -->
+    <div class="glass-card role-panel" id="role-audio" style="padding: 30px;">
+      <div class="role-img-box">
+        <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=800&q=80" alt="Audio recording">
+      </div>
+      <div class="role-info-box">
+        <span class="section-tag">Audio Scripts</span>
+        <h3>Ready-to-Record Voiceover Scripts</h3>
+        <p>Formatted for YouTube storytellers and podcast narrators. Scripts include voice cues, pauses, and sound effect markers so your voiceover sounds natural and engaging.</p>
+        <ul class="role-deliverables">
+          <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Clear sound effect cues (wind, footsteps, doors)</li>
+          <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Paced specifically for spoken-word delivery</li>
+          <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Optimized for high YouTube audience retention</li>
+        </ul>
+        <a href="https://www.fiverr.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 9px 20px;">Order an Audio Script</a>
+      </div>
+    </div>
+
+    <!-- Panel 3 -->
+    <div class="glass-card role-panel" id="role-satire" style="padding: 30px;">
+      <div class="role-img-box">
+        <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=800&q=80" alt="Tea stall adda">
+      </div>
+      <div class="role-info-box">
+        <span class="section-tag">Social Realism</span>
+        <h3>Everyday Life &amp; Witty Satire</h3>
+        <p>Short stories that capture local bus stops, roadside hotels, late-night cassette qawwalis, and lively village debates. Warm, humorous, and relatable.</p>
+        <ul class="role-deliverables">
+          <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Sharp social observation and comedy</li>
+          <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Realistic community characters</li>
+          <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Rich cultural nostalgia</li>
+        </ul>
+        <button class="btn btn-primary open-story-trigger" data-story="story-2" style="padding: 9px 20px;">Read "Purana Pull Adda"</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Stories -->
+<section class="section" id="stories">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-tag">Portfolio</span>
+      <h2>Selected Stories</h2>
+      <p>Click any card to read the complete Urdu text.</p>
+    </div>
+
+    <div class="stories-grid">
+
+      <!-- Post 1 -->
+      <article class="glass-card story-card">
+        <div class="story-thumb-wrap">
+          <img src="https://images.unsplash.com/photo-1509114397022-ed747cca3f65?auto=format&fit=crop&w=800&q=80" alt="Mysterious glowing canal at midnight" loading="lazy">
+          <span class="story-badge">Suspense</span>
+        </div>
+        <div class="story-card-body">
+          <h3 class="story-urdu-title">تصورِ حور اور نیند کی گولی</h3>
+          <span class="story-trans-title">Tasawwur-e-Hoor Aur Neend Ki Goli</span>
+          <p class="story-excerpt">What begins as a sedative-induced dream beside a mountain river ends near an old canal rest house with forty-year-old secrets.</p>
+          <div class="story-meta-footer">
+            <button class="btn btn-glass open-story-trigger" data-story="story-1" style="padding: 6px 14px; font-size: 0.8rem;">Read Story</button>
+            <button class="btn-glass download-btn" data-story="story-1" style="padding: 6px 12px; font-size: 0.78rem;">Download</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Post 2 -->
+      <article class="glass-card story-card">
+        <div class="story-thumb-wrap">
+          <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=800&q=80" alt="Village adda at night" loading="lazy">
+          <span class="story-badge">Satire</span>
+        </div>
+        <div class="story-card-body">
+          <h3 class="story-urdu-title">پرانا پُل اڈا</h3>
+          <span class="story-trans-title">Purana Pull Adda</span>
+          <p class="story-excerpt">A lighthearted look at Ramzan mornings, loud cassette qawwalis, winter barber shop heaters, and village philosophers.</p>
+          <div class="story-meta-footer">
+            <button class="btn btn-glass open-story-trigger" data-story="story-2" style="padding: 6px 14px; font-size: 0.8rem;">Read Story</button>
+            <button class="btn-glass download-btn" data-story="story-2" style="padding: 6px 12px; font-size: 0.78rem;">Download</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Post 3 -->
+      <article class="glass-card story-card">
+        <div class="story-thumb-wrap">
+          <img src="https://images.unsplash.com/photo-1534088568595-a066f410bcda?auto=format&fit=crop&w=800&q=80" alt="Crimson dust storm over city" loading="lazy">
+          <span class="story-badge">Chronicle</span>
+        </div>
+        <div class="story-card-body">
+          <h3 class="story-urdu-title">ملتان کا مٹی کا طوفان</h3>
+          <span class="story-trans-title">The Dust Storm of Multan</span>
+          <p class="story-excerpt">A real-time account of an intense red dust storm that swallowed the sky at 110 km/h across Muzaffargarh and Multan.</p>
+          <div class="story-meta-footer">
+            <button class="btn btn-glass open-story-trigger" data-story="story-3" style="padding: 6px 14px; font-size: 0.8rem;">Read Story</button>
+            <button class="btn-glass download-btn" data-story="story-3" style="padding: 6px 12px; font-size: 0.78rem;">Download</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section" id="testimonials">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-tag">Feedback</span>
+      <h2>Reader Comments</h2>
+      <p>Responses from regular readers on published chapters.</p>
+    </div>
+
+    <div class="testimonials-grid">
+      <!-- 1 -->
+      <div class="glass-card comment-card">
+        <div class="comment-user-row">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Malik Tariq" class="user-avatar">
+          <div class="user-meta">
+            <h4>Malik Tariq Farooq</h4>
+            <span>Multan • Reader</span>
+          </div>
+        </div>
+        <div class="comment-body comment-urdu">
+          "طوفان والی تحریر پڑھ کر واقعی 110 کلومیٹر والی آندھی آنکھوں کے سامنے گھوم گئی۔ قلعہ کہنہ اور ہسپتال کے مناظر کمال لکھے ہیں۔"
+        </div>
+        <div class="comment-reactions">
+          <span>48 Likes</span>
+          <span style="color:var(--crimson)">On: مٹی کا طوفان</span>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="glass-card comment-card">
+        <div class="comment-user-row">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="Zulqarnain" class="user-avatar">
+          <div class="user-meta">
+            <h4>Engr. Zulqarnain Qurashi</h4>
+            <span>Muzaffargarh • Reader</span>
+          </div>
+        </div>
+        <div class="comment-body">
+          "I was right there on the road during that storm. The tension in this story captures the exact moment without exaggeration."
+        </div>
+        <div class="comment-reactions">
+          <span>72 Likes</span>
+          <span style="color:var(--crimson)">On: مٹی کا طوفان</span>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="glass-card comment-card">
+        <div class="comment-user-row">
+          <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=120&q=80" alt="Rashid" class="user-avatar">
+          <div class="user-meta">
+            <h4>Rashid Mehmood</h4>
+            <span>Lahore • Reader</span>
+          </div>
+        </div>
+        <div class="comment-body comment-urdu">
+          "پرانا پل اڈا پڑھ کر پرانے وقتوں کی یادیں تازہ ہو گئیں۔ قوالیوں اور سردیوں کی انگیٹھی کا تذکرہ بہت سادہ اور دلکش ہے۔"
+        </div>
+        <div class="comment-reactions">
+          <span>95 Likes</span>
+          <span style="color:var(--crimson)">On: پرانا پل اڈا</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Expandable Comments Drawer -->
+    <div class="vault-drawer" id="vaultDrawer">
+      <div class="testimonials-grid">
+        <div class="glass-card comment-card">
+          <div class="comment-user-row">
+            <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=120&q=80" alt="Dr Kamran" class="user-avatar">
+            <div class="user-meta">
+              <h4>Dr. Kamran Sohail</h4>
+              <span>Rawalpindi</span>
+            </div>
+          </div>
+          <div class="comment-body comment-urdu">
+            "تصور حور کے دوسرے حصے میں نہر کے کنارے والا سسپنس واقعی یادگار ہے۔"
+          </div>
+          <div class="comment-reactions">
+            <span>64 Likes</span>
+            <span style="color:var(--crimson)">On: تصورِ حور</span>
+          </div>
+        </div>
+
+        <div class="glass-card comment-card">
+          <div class="comment-user-row">
+            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=120&q=80" alt="Shehzad" class="user-avatar">
+            <div class="user-meta">
+              <h4>Shehzad Alam</h4>
+              <span>Multan</span>
+            </div>
+          </div>
+          <div class="comment-body">
+            "Very clear Urdu prose with zero unnecessary drama. Feels like listening to a good friend narrate a real incident."
+          </div>
+          <div class="comment-reactions">
+            <span>39 Likes</span>
+            <span style="color:var(--crimson)">General Review</span>
+          </div>
+        </div>
+
+        <div class="glass-card comment-card">
+          <div class="comment-user-row">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80" alt="Samina" class="user-avatar">
+            <div class="user-meta">
+              <h4>Samina Bukhari</h4>
+              <span>Islamabad</span>
+            </div>
+          </div>
+          <div class="comment-body comment-urdu">
+            "آپ کی تحریریں یوٹیوب آڈیو چینلز کے لیے بہترین ہیں۔ روانی بہت قدرتی ہے۔"
+          </div>
+          <div class="comment-reactions">
+            <span>53 Likes</span>
+            <span style="color:var(--crimson)">On: Audio Formats</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="vault-toggle-container">
+      <button class="btn btn-glass" id="toggleVaultBtn">
+        <span id="vaultBtnText">View More Reader Reviews</span>
+        <span id="vaultArrow">↓</span>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-tag">Questions</span>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-accordion">
+      <div class="faq-node">
+        <button class="faq-trigger">
+          How do I place an order for a custom story?
+          <span class="faq-plus">+</span>
+        </button>
+        <div class="faq-body">
+          <p>You can contact me directly on the Fiverr Desk with your plot idea, target word count, and delivery deadline. We will finalize the brief before writing starts.</p>
+        </div>
+      </div>
+      <div class="faq-node">
+        <button class="faq-trigger">
+          Do you format scripts for YouTube narrations?
+          <span class="faq-plus">+</span>
+        </button>
+        <div class="faq-body">
+          <p>Yes. Voice scripts include narration pacing notes, dramatic breath breaks, and background sound indicators to make voice recording straightforward.</p>
+        </div>
+      </div>
+      <div class="faq-node">
+        <button class="faq-trigger">
+          What is the usual delivery time?
+          <span class="faq-plus">+</span>
+        </button>
+        <div class="faq-body">
+          <p>Standard short stories (2,000 to 3,500 words) take between 3 to 5 working days depending on revision requirements.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="section" id="contact">
+  <div class="wrap">
+    <div class="contact-wrapper">
+      <h2 style="font-size:2rem; margin-bottom:10px;">Get Notified on New Drops</h2>
+      <p style="color:var(--text-dim); margin-bottom:24px;">Drop your email to receive newly published fiction pieces directly.</p>
+      
+      <form class="newsletter-bar" id="newsletterForm">
+        <input type="email" class="newsletter-input" id="subscriberEmail" placeholder="Your email address" required>
+        <button type="submit" class="btn btn-primary" style="padding:10px 22px;">Subscribe</button>
+      </form>
+
+      <div class="contact-meta-row">
+        <div class="meta-col">
+          <div class="label">Author</div>
+          <div class="val">Javed Iqbal</div>
+        </div>
+        <div class="meta-col">
+          <div class="label">Location</div>
+          <div class="val">Multan, Pakistan</div>
+        </div>
+        <div class="meta-col">
+          <div class="label">Order Desk</div>
+          <div class="val"><a href="https://www.fiverr.com/" target="_blank">Fiverr Profile</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="brand">
+          <div class="brand-badge">JI</div>
+          <span>Javed Iqbal</span>
+        </a>
+        <p>Urdu fiction writer focusing on suspense, regional realism, and audio scripts.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#roles">Writing Roles</a></li>
+          <li><a href="#stories">Fiction</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://www.fiverr.com/" target="_blank" rel="noopener noreferrer">Fiverr Desk</a></li>
+          <li><a href="https://www.facebook.com/javed.iqbal.817576/" target="_blank" rel="noopener noreferrer">Facebook Profile</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Javed Iqbal. Original Urdu Fiction.</span>
+      <a href="#home" style="color:var(--crimson)">Back to top ↑</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Story Reader 1 -->
+<div class="story-reader" id="story-1">
+  <div class="reader-header">
+    <button class="ctrl-btn close-reader">← Close</button>
+    <div style="display:flex; gap:8px;">
+      <button class="ctrl-btn" id="decreaseFont1">A-</button>
+      <button class="ctrl-btn" id="increaseFont1">A+</button>
+      <button class="ctrl-btn toggle-sepia" data-target="story-1">Sepia</button>
+      <button class="ctrl-btn share-btn" data-title="تصور حور اور نیند کی گولی">Share</button>
+    </div>
+    <a href="https://www.fiverr.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 6px 14px; font-size: 0.78rem;">Fiverr Desk</a>
+  </div>
+  <div class="reader-main">
+    <img src="https://images.unsplash.com/photo-1509114397022-ed747cca3f65?auto=format&fit=crop&w=1200&q=80" alt="Canal story art" class="reader-hero-art">
+    <div class="reader-meta-tag">URDU SUSPENSE • STORY 01</div>
+    <h1 class="reader-title-urdu">تصور حور اور نیند کی گولی</h1>
+    <p class="reader-byline">مصنف: جاوید اقبال</p>
+    <div class="reader-text" id="text-story-1">
+      <p>رات کو سونے سے قبل سر شام سے سکون کی گولی کھا لی تھی کیونکہ اگلے دن ھفتہ وار چھٹی تھی دل میں ایک امنگ سی تھی کہ رات کو ایسے ایسے خوبصورت سپنے دیکھوں جیسے کہ مولانا ٹی جے کی خطابات میں سنائے جاتے ھیں ۔ دنیاوی زندگی تو بیگم صاحبہ کی نگاھوں سے بچ نہیں پاتی تھی سوچا مولانا صاحب کا دامن حور کو پکڑنے ہیں کہ بات بھی بن جائے اور ازدواجی زندگی بھی متاثر نہ ھو ۔</p>
+      <p>کسی قریبی دوست کے کہنے پر ایک ہفتے سے حوروں کی قربت کے خوابوں کا سلسلہ پہلے سے جاری تھا دل میں مولانا صاحب کے لیے عزت کا رشتہ اور مضبوط سے مضبوط تر ھوتا جا رہا تھا ۔ دن کاٹے سے نہیں کاٹتا تھا ۔ دن میں ٹی جے کی ویڈیو حور کا دور چلتا اور رات مولانا صاحب کی جادوئی دنیا کی سیر میں گزر جاتی ۔</p>
+      <p>الغرض سرشام سے کھائی ھوئی گولی کا فل اثر رات نو بجے سے سر پر ناچ رہا ھے ایک اور تقریر سن کر اپنے آپ کو مولانا صاحب کی جادوئی دنیا کے حوالے کر دیتا ھوں ۔۔</p>
+      <p>رات کو پچھلا پہر ھے میں اپنی گاڑی پر ایک ایسے علاقے میں سفر کر رہا ھوں جس کے ایک طرف تاحد نگاہ پہاڑی سلسلہ ھے جس کی فلک بوس چوٹیاں آسمانوں کو چھو رئیں ہیں ۔ دوسری جانب ایک ایسا دریا ھے جس کے پانی کی سطح نہایت بلند ھے اور پانی سے پانی کے ٹکرانے کا شور انسانی کانوں کے پردے پھاڑتا ھوا اپنے سفر پر رواں دواں ھے ۔ اس دریا کا پانی اتنا شفاف ھے کہ اس کے اندر پہاڑی سطح صاف دکھائی دیتی ھے جس میں رنگ برنگے ملبوسات پہن کر کوئی خوب صورت مخلوق اپنی خوبصورتی کے جلوے بکھیرتی ہوئی نظر آ رہی ھے ۔ ان کے خوبرو جوان ادائیں دیکھنے سے تعلق رکھتی ہیں ۔ گیسوں کی بات کی جائے تو سر سے شروع ھو کر پاؤں کو چھوتے نظر آ رہے ہیں۔ آنکھوں کی بات کی جائے تو کسی جھیل کی ماند اتنی گہری کے اس میں ڈوب جانے کو دل چاہیے ۔</p>
+      <p>جسم کے اتار چڑھاؤ ایسے جیسے کوہ ہمالیہ کی فلک شگاف چوٹیاں</p>
+      <p>بھرے بھرے جسم کی حدت پانی کا سینہ چیرتی ہوئی آنکھوں کے راستے ڈائرکٹ دل میں اترتی ھوئی محسوس ھو رہی تھی ۔ کسی ایک پر نظرِ رکتی تو دوسرا خوبرو چہرہ اپنی جانب دعوت عشقِ دیتا ھوا نظر آتا ۔ ایسے لگتا تھا کہ فیسں بک کی کوئی REELS دیکھ ریا ھوں ۔ دل کی دھڑکن تیز سے تیز تر ھوتی جا رہی تھی جس کی آواز میں خود سن سکتا تھا ۔ گاڑی مزید آہستہ ھوتی جا رہی ھے ۔ ادھر سے دعوت ملن کی صدا بلند ھوتی ھے جذبات اپنے عروج پر پہنچ جاتے ہیں ملاپ کی بیتابی اپنے نقظہ عروج پر پہنچ جاتی ھے مولانا صاحب کے خواب اور گولی کا اثر اپنی آخری حدوں کو چھو رہا ھے ۔ آخر جذبات عقل پر غالب آتے ہیں اور گاڑی سمیت تیز رفتار شفاف پانی کے دریا میں اپنا سب کچھ قربان کر دیتا ھوں ۔</p>
+      <p>آج اتوار کے دس بجے ہیں بیگم صاحبہ فون پر ڈاکٹر صاحب کو کہہ رہی ہیں اب ھوش میں آ چکے ہیں اللہ تعالیٰ نے بہت مہربانی فرمائی ھے باقی جو میڈسن آپ نے لکھ کر دیں ہیں وہ جاری رکھے گے ۔</p>
+      <p style="text-align:center; color:var(--crimson); margin: 28px 0; font-weight:700;">— حصہ دوم —</p>
+      <p>یہ ڈھلتی ہوئی رات اپنے دامن میں محبت کی ایک المناک کہانی کی چشم دید گواہ تھی۔ یہ ایک انوکھی شادی کی تقریب تھی جس میں اجسام کے ملاپ کی کوئی صورت نظر نہیں آتی تھی۔ شادیانے بجنے کی آواز میں ایک پراسرار سا سوگ طاری تھا ایک غمگین پرسواز آواز نے ایک نغمہ چھیڑا اس گیت کے الفاظ کسی صدیوں پرانی متروک زبان کے تھے جس سے اب کے لوگ ناآشنا تھے۔ اس گیت کے اندر ایک انوکھا سوز اور درد پوشیدہ تھا گیت کے چند الفاظ کی ادائیگی کے بعد ماحول پر ایک مکمل خاموشی سی طاری ھو جاتی مگر اس گیت کے الفاظوں کی بازگشت آسمان پر پھیلے سیاہ بادلوں سے اور بادلوں کے جھرمٹ میں منہ چھپائے چاند ستاروں سے سنائی دیتی مگر اس کے الفاظ اور موسیقی کی دھن اپنے اندر صدیوں کے ارمان غموں اور دکھوں کی سیاہ چادر اوڑھے ہوئے ھوتے۔</p>
+      <p>کینال ریسٹ ہاؤس کے چوکی دار کی نیم مردہ آنکھیں آب دیکھنے کے قابلِ ھوتی جا رہی تھیں۔ اس کے دماغ میں سب سے پہلا احساس خوشی کے شادیانے بجنے کی آواز سے ھوتا ھے گزرے ہوئے وہ پراسرار واقعات ایک ایک کرکے آس کی آنکھوں کی پردہ سکرین پر نظر آنے لگ جاتے ہیں وہ تیزی کے ساتھ اپنی لاٹھی کو اٹھاتا ھے آپنے دائیں جانب رکھی ھوئی لالٹین کی جانب لپکتا ھے وہ ان آوازوں کی طرف جانے کے لئے نہر کی سائیڈ والے راستے کا انتخاب کرتا ھے اس کے بوڑھے جسم میں نجانے کہاں سے اتنی طاقت آ گی تھی وہ جلدی سے نہر کے کنارے کی جانب بڑھتا ھے نہر کی دوسرے کنارے پر واقع ششم اور کیکر کے پرآنے درخت جھوم جھوم کر نہر کے پانی سے اپنی الفت کا اظہار کرتے ھوئے نظر آ رہے تھے ۔ محبت کا جنوں اب سر پر چڑھ کر بول رہا تھا فطرت اپنے جوبن پر نظر آتی تھی پانی کے شور میں گیت کی آواز شامل ھو کر ایک عجیب سی کیفیت پیدا کر رہی تھی چوکیدار تیزی کے ساتھ اس پرآنے کنویں کی جانب بڑھتا جا رہا تھآ مگر ایک احساس نے اس کے بوڑھے جسم کو جیسے شل سا کر دیا تھا وہ اکیلا نہیں تھا اس کے آس پاس پرآنے سفید لباسوں میں ملبوس بغیر جوتوں کے دس پندرہ لوگ اس کے ہم سفر تھے ان میں سے وہ دو چہروں کو پہچان چکا تھا اور اسی بات نے اس کے بدن کو تقریباً ماوف سا کر دیا تھا وہ ان اشخاص کو جانتا تھا اس کی ملازمت کے دوسرے سال تقریبا 40 سال قبل ان دونوں کی مسخ شدہ لاشیں نہر سے نکالی گئی تھیں ان کے ساتھ کیا ھوا تھا یہ ایک معمہ تھا جس کو کوئی اب تک جان نہیں پایا تھا مگر کچھ لوگ اس خوف ناک واقعات کے امیں تھے مگر کھبی بھی اس سے پردہ اٹھانے پر تیار نظر نہیں آتے تھے۔</p>
+      <p>اچانک ان میں ایک آدمی کا برف زدہ بے جان سرد ھاتھ چوکیدار کے کندھے پر آتا ھے وہ شخص چوکی دار کو اس پر مسرت شادی کے موقع پر مبارک باد پیش کرتا ھے اور دوسرا آدمی گرتے ہوئے چوکی دار کے ٹھنڈے جسم کو اپنے مردہ جسم کا حصہ بنا کر تھام لیتا ھے۔</p>
+      <p style="color:var(--crimson); font-style:italic;">جاری ھے...</p>
+    </div>
+    <p class="reader-signature">تحریر: جاوید اقبال</p>
+  </div>
+</div>
+
+<!-- Story Reader 2 -->
+<div class="story-reader" id="story-2">
+  <div class="reader-header">
+    <button class="ctrl-btn close-reader">← Close</button>
+    <div style="display:flex; gap:8px;">
+      <button class="ctrl-btn" id="decreaseFont2">A-</button>
+      <button class="ctrl-btn" id="increaseFont2">A+</button>
+      <button class="ctrl-btn toggle-sepia" data-target="story-2">Sepia</button>
+      <button class="ctrl-btn share-btn" data-title="پرانا پل اڈا">Share</button>
+    </div>
+    <a href="https://www.fiverr.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 6px 14px; font-size: 0.78rem;">Fiverr Desk</a>
+  </div>
+  <div class="reader-main">
+    <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1200&q=80" alt="Village adda at night" class="reader-hero-art">
+    <div class="reader-meta-tag">URDU SATIRE • STORY 02</div>
+    <h1 class="reader-title-urdu">پرانا پل اڈا</h1>
+    <p class="reader-byline">مصنف: جاوید اقبال</p>
+    <div class="reader-text" id="text-story-2">
+      <p>غالباً کلاس نہم میں تھا کہ ماہ رمضان میں روزوں کے دوران سحری کے وقت نواب پور پل اڈا پر ایک نہایت ہی مقدس سا ماحول بن جاتا تھا اس میں عزیز میاں قوال اور نصرت فتح علی خان کی مشہور قوالیاں آواز بلند میں عوام کو سنانے کا خاص اہتمام کیا جاتا دودھ دہی کی دوکان جو کہ ظہورِ مہانہ اور عفور مہانہ چلاتے تھے یہ دوکان سیاسی دور میں پارٹی دفتر بھی بن جاتی ان کے والد صاحب میرے خیال میں ان کا نام منظور تھا وہ اپنی شخصیت اور ذات میں کافی مقبول انسان تھے اور بہت سی اندورنی اور بیرونی خوبیوں کے مالک بھی تھے۔</p>
+      <p>ساتھ میں ایک مشہور حمام بھی تھا جو عوام کو اپنی اعلیٰ سطح کی کاروباری روحانی و دیگر خدمات سے مستفید کرتا تھا سردیوں کے موسم میں یہاں پر آگ کی انگیٹھی دوکان کے اندر تھی جو کہ آنے والے لوگوں کے جسم اور جذبات دونوں کو ساتھ ساتھ گرم کرتی سونے پہ سہاگا قوالی سے لوگوں کے دلوں کو منور کیا جاتا وہاں پر کام کرنے والے لڑکوں اور اخبار کی سہولت کی بدولت بہت سارے گاہک دو دو بار نہانے کی فرمائش کرکے اپنا غیر قمیتی وقت وہاں گزارتے تھے یہ تو اللہ کا شکر ہے کہ ٹی وی بعد میں آیا ورنہ ان کے شب و روز وہی پر ہی بسر ہوتے۔</p>
+      <p style="text-align:center; color:var(--crimson); margin: 24px 0; font-weight:600;">"یہ جو ہلکا ہلکا سرور ہے سب تیری نظر کا قصور ہے کہ تو نے شراب پینا سکھا دیا"</p>
+      <p>اس والی قوالی جو کہ ایک غزل ہے اس کے الفاظ کو مقدس جان کر بار بار دوبارہ لگانے کی فرمائش کی جاتی جس عظیم شخصیت کے ہاتھ میں ٹیپ ریکارڈر کا چارج ہوتا اس کی خاطر مدارت زبانی روحانی و بدنی طور پر کی جاتی۔</p>
+      <p>قوالی کے الفاظ اہلیان علاقہ کے اندرونی اور بیرونی احساسات وجذبات کو اتنا عروج پر لے جاتے کہ وہ سارا دن اسی احساس و جذبات کو دامنِ گیر کیے ایک خاص قسم کی مستی کی کیفیت میں رہتے جس سے ان کا اور دوسرے لوگوں کا ٹائم بااحسن طریقے سے گذر جاتا۔</p>
+      <p>باقی پل اڈا پر ایک مسجد موجود تھی جو کہ الحدیث مکاتب فکر کے علماء کے زیر اہتمام و انتظام کام کرتی تھی سر شام گاؤں کی روایات کے مطابق علاقے کے لوگ اپنی اپنی مسلک کی مساجد میں افطاری کے وقت سے پہلے کھانے اور دوسری اقسام کی اشیاء مساجد میں دے آتے جس کی تقسیم کی ذمہ دار فورسزز اپنے حصے کو محفوظ مقام پر منتقل کرنے کے بعد باقی کی افطاری آنے والے روزہ داروں کے لیے چھوڑ دیتی تھیں۔</p>
+      <p>اور اسکے بعد آنے والے دن کی تیاری پر بات چیت شروع ہوتی اور ساتھ ساتھ لگے ھاتھوں جنت اور دوزخ میں آبادکاروں کی مجموعی تعداد اور اس کے مکینوں کے نام بمہ الاٹمنٹ ایک دوسرے کے سامنے عیاں کیے جاتے مگر اس بات کا خیال رکھا جاتا کہ وہ اپنے ہی گردونواح سے تعلق رکھتے ھوں۔</p>
+      <p>اور فتویٰ سازی ایک من پسند موضوع ہوتا تھا جس کی زد میں صرف مسلمان ہی آتے۔</p>
+    </div>
+    <p class="reader-signature">تحریر: جاوید اقبال</p>
+  </div>
+</div>
+
+<!-- Story Reader 3 -->
+<div class="story-reader" id="story-3">
+  <div class="reader-header">
+    <button class="ctrl-btn close-reader">← Close</button>
+    <div style="display:flex; gap:8px;">
+      <button class="ctrl-btn" id="decreaseFont3">A-</button>
+      <button class="ctrl-btn" id="increaseFont3">A+</button>
+      <button class="ctrl-btn toggle-sepia" data-target="story-3">Sepia</button>
+      <button class="ctrl-btn share-btn" data-title="ملتان کا مٹی کا طوفان">Share</button>
+    </div>
+    <a href="https://www.fiverr.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 6px 14px; font-size: 0.78rem;">Fiverr Desk</a>
+  </div>
+  <div class="reader-main">
+    <img src="https://images.unsplash.com/photo-1534088568595-a066f410bcda?auto=format&fit=crop&w=1200&q=80" alt="Blood red dust storm" class="reader-hero-art">
+    <div class="reader-meta-tag">ATMOSPHERIC CHRONICLE • STORY 03</div>
+    <h1 class="reader-title-urdu">ملتان کا مٹی کا طوفان</h1>
+    <p class="reader-byline">مصنف: جاوید اقبال — ملتان</p>
+    <div class="reader-text" id="text-story-3">
+      <p>شام کا وقت قریب آتا جا رہا ھے اچانک سے واٹس ایپ میسج کی ھلکی سی رنگ ھوتی ھے شاید کوئی ضروری میسج ھو ۔ وہ نیند سے جاگتا ھے فون پر آئے ھوئے محسج کو دیکھ کر ایک ویڈیو کو جلدی جلدی لوڈ کرتا ھے ۔</p>
+      <p>ویڈیو کو دیکھ کر اس کے رونگٹے کھڑے ھو جاتے ہیں ۔ سڑک پر جاتی ھوئی گاڑی کے اندر سے بنائی ھوئی ویڈیو جس میں وہ آسمان کی رنگت جو کہ دن کے وقت خون آلود سی نظر آ رہی ھے ۔ گاڑیاں رک چکیں ہیں اور زور دار آوازیں سنائی دے رہی ہیں۔ وہ موت کی سی تیز رفتاری کے ساتھ انسانوں کی بنائی ھوئی آبادیوں کی جانب آگے بڑھ رہی ھے ۔ جگہ کی بابت دریافت کرنے پر معلوم ھوتا ھے کی دوست Engr Zulqarnain Rasool Qurashi کی گاڑی تونسہ موڑ مظفر گڑھ پر موجود ھے ۔</p>
+      <p>شام کے 06.40 منٹ پر وہ اپنے بیٹے کو صورتحال بتاتا ھے اور بیٹے کے وہ الفاظ پورے گھر میں گونج جاتے ہیں "پھر تو یہ ملتان کے بہت ہی قریب آ چکا ھے" کمرے کا دروازا بند ھے اور اے سی بھی چل رہا ھے اچانک سے ایک سرخ و سیاہ گہری چادر آسمان پر چھا جاتی ھے روشنی دن میں رات کے اندھیرے میں ڈوب جاتی ھے ۔ فورا سے باھر کے منظر پر نظرِ پڑتی ھے 110 کلومیٹر فی گھنٹہ کی رفتار سے مغربی دباؤ سے سوات خیبرپختونخوا سے چلنے والا مٹی کا طوفان تباہی کی داستانیں رقم کرتا ھوا شہر اولیاء ملتان کے دروازوں پر دستک دے ریا ھے ۔ خوف کی ایک لہر اس کے رگ و جان میں سرایت کر جاتی ھے ۔ ایسا خوفناک سین کہ خدا کی پناہ ۔ ایک خوفناک گڑگڑاہٹ جو کہ بڑی تیزی کے ساتھ قریب سے قریب تر آتی جا رہی تھی ۔ آسمان جیسے لہو سے نہایا ھوا تھا ۔ ایک آگ سی جلتی ھوئی محسوس ھو رہی تھی ۔ ایسے لگتا تھا کہ یہ کالی سیاہ خون آلود آندھی آج سب کچھ اجاڑ کر رکھ دے گی ۔ گڑگڑاہٹ تیزی سے قریب آتی جا رہی ھے شمالی کی طرف سے آنے والا یہ طوفان جیسے ھر چیز کو فنا کر دینے والا ھو آخر یہ خوفناک عفریت اس کے گھر کے درودیوار سے ٹکڑا جاتا ھے ۔ اوپر والی سٹوری پر گھر واقع ھونے کی وجہ سے ملتان شہر کا کارڈ لوجی ھسپتال اور پی ٹی ایل کے ٹاورز جو کہ تھوڑی دیر پہلے کسی پہاڑ کی مانند کھڑے تھے وہ گہرے سیاہ ماحول میں ڈوب جاتے ہیں ۔ تھرڈ فلور پر لگا سولر پینل ایک خوف کی علامت کے طور پر اس کی نظروں کے سامنے آ رھا ھے ۔ یہ اس کے لگنے کے بعد کی پہلی آسمانی افتاد تھی جو آس سے ٹکرانے والی تھی۔ سارا ماحول کسی طلسمی سی قوت کے ھاتھوں حرکت کر رھا ھے ۔ فطرت آج اپنے آپ کو بنا کسی رعایت کے پیش کرتی ھوئی نظر آتی ھے ۔</p>
+      <p>اچانک ایک بھپرے ھوئے ھوا کے گرداب نے ایک قد آور درخت کو زمین بوس کر دیا ھے درخت کی سسکیاں طوفان کی ہیبت ناک چنگھاڑ میں گم سی جاتی ھے ۔</p>
+      <p>فطرت کا بے رحم کھیل اب آہستہ آہستہ دور جاتا ھوا محسوس ھوتا ھے ۔ آسمان پر کالی سیاہ خون میں ڈوبی ھوئی گھڑیاں ختم ھونے کے قریب ہیں ۔ روشنی کسی نیک و پاکیزہ روح کی ماند نمودار ھونے لگ گئی ھے ۔ ایسے لگتا ھے کہ کوئی ڈروانہ خواب اپنے اختتام کی جانب رواں دواں ھے ۔</p>
+      <p>پھر سب کچھ تبدیل ھو جاتا ھے ۔ ظالم نظر آنے والی فطرت پھر سے ایک معصوم پیراہن میں جلوہ گر ھے آیسے لگتا ھے تھوڑی دیر پہلے اس کے اس روپ میں کوئی اور ستم گر تھا ۔</p>
+    </div>
+    <p class="reader-signature">تحریر: جاوید اقبال — ملتان</p>
+  </div>
+</div>
+
+<script>
+(function() {
+  function showToast(msg) {
+    var toast = document.getElementById('toastMsg');
+    toast.textContent = msg;
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 3000);
+  }
+
+  // Nav scroll
+  var nav = document.getElementById('siteNav');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 20) {
+      nav.style.background = 'rgba(9, 5, 6, 0.96)';
+    } else {
+      nav.style.background = 'rgba(9, 5, 6, 0.85)';
+    }
+  });
+
+  // Mobile menu
+  var hamburger = document.getElementById('hamburger');
+  var mobileMenu = document.getElementById('mobileMenu');
+  function closeMenu() {
+    mobileMenu.classList.remove('open');
+    document.body.classList.remove('no-scroll');
+  }
+  hamburger.addEventListener('click', function() {
+    var isOpen = mobileMenu.classList.toggle('open');
+    document.body.classList.toggle('no-scroll', isOpen);
+  });
+  document.querySelectorAll('.mnav').forEach(function(a) {
+    a.addEventListener('click', closeMenu);
+  });
+
+  // Role Switcher
+  var roleBtns = document.querySelectorAll('.role-tab-btn');
+  var rolePanels = document.querySelectorAll('.role-panel');
+  roleBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      roleBtns.forEach(function(b) { b.classList.remove('active'); });
+      rolePanels.forEach(function(p) { p.classList.remove('active'); });
+      btn.classList.add('active');
+      var targetId = btn.getAttribute('data-target');
+      var targetPanel = document.getElementById(targetId);
+      if (targetPanel) targetPanel.classList.add('active');
+    });
+  });
+
+  // Testimonials Drawer
+  var toggleBtn = document.getElementById('toggleVaultBtn');
+  var drawer = document.getElementById('vaultDrawer');
+  var btnText = document.getElementById('vaultBtnText');
+  var btnArrow = document.getElementById('vaultArrow');
+
+  if (toggleBtn && drawer) {
+    toggleBtn.addEventListener('click', function() {
+      var isOpen = drawer.classList.toggle('open');
+      if (isOpen) {
+        btnText.textContent = 'Collapse Reader Reviews';
+        btnArrow.textContent = '↑';
+      } else {
+        btnText.textContent = 'View More Reader Reviews';
+        btnArrow.textContent = '↓';
+      }
+    });
+  }
+
+  // Reader Modals
+  function openReader(id) {
+    var modal = document.getElementById(id);
+    if (!modal) return;
+    modal.classList.add('open');
+    document.body.classList.add('no-scroll');
+    modal.scrollTop = 0;
+  }
+  function closeReader(modal) {
+    modal.classList.remove('open');
+    document.body.classList.remove('no-scroll');
+  }
+
+  document.querySelectorAll('.open-story-trigger').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      openReader(btn.getAttribute('data-story'));
+    });
+  });
+
+  document.querySelectorAll('.close-reader').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      closeReader(btn.closest('.story-reader'));
+    });
+  });
+
+  // Font adjustments
+  function setupFont(decrId, incrId, textId) {
+    var decr = document.getElementById(decrId);
+    var incr = document.getElementById(incrId);
+    var textElem = document.getElementById(textId);
+    var size = 1.3;
+    if (incr && decr && textElem) {
+      incr.addEventListener('click', function() {
+        if (size < 1.9) { size += 0.15; textElem.style.fontSize = size + 'rem'; }
+      });
+      decr.addEventListener('click', function() {
+        if (size > 1.0) { size -= 0.15; textElem.style.fontSize = size + 'rem'; }
+      });
+    }
+  }
+  setupFont('decreaseFont1', 'increaseFont1', 'text-story-1');
+  setupFont('decreaseFont2', 'increaseFont2', 'text-story-2');
+  setupFont('decreaseFont3', 'increaseFont3', 'text-story-3');
+
+  // Sepia
+  document.querySelectorAll('.toggle-sepia').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var target = document.getElementById(btn.getAttribute('data-target'));
+      if (target) {
+        var isSepia = target.classList.toggle('sepia-mode');
+        btn.textContent = isSepia ? 'Dark' : 'Sepia';
+      }
+    });
+  });
+
+  // Download
+  document.querySelectorAll('.download-btn').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var id = btn.getAttribute('data-story');
+      var elem = document.getElementById('text-' + id);
+      if (elem) {
+        var blob = new Blob([elem.innerText], { type: 'text/plain;charset=utf-8' });
+        var a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = id + '-javed-iqbal.txt';
+        a.click();
+        showToast('Text downloaded');
+      }
+    });
+  });
+
+  // Share
+  document.querySelectorAll('.share-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(window.location.href);
+        showToast('Link copied to clipboard');
+      }
+    });
+  });
+
+  // Newsletter
+  var newsForm = document.getElementById('newsletterForm');
+  if (newsForm) {
+    newsForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      showToast('Thank you for subscribing!');
+      newsForm.reset();
+    });
+  }
+
+  // Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.story-reader.open').forEach(function(m) {
+        closeReader(m);
+      });
+      closeMenu();
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
+```[cite: 1]
